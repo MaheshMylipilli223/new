@@ -21,7 +21,7 @@ mongoose.connect(CONNECTION_URL).then((res) => {
     console.log('DB not connected\n', err)
 })
 
-const PORT = 8000
+const PORT = process.env.PORT || 3030;
 app.listen(PORT, (err) => {
     if(err)console.log('Server not started')
     else console.log('Server started and running successfully at', PORT)
